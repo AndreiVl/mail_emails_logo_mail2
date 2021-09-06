@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office")
+	include include/head.pug
+	+head('email-2')
+
+	body()
+		-var utm = '0404_bonuses';
+		-var link = '?utm_source=crm&utm_medium=email&utm_content=homepage&utm_campaign='+utm;
+
+		include ../library/library-mixins.pug			
+		include ../blocks/mixins.pug						
+		<!-- BODY -->
+		table(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center")
+					<!-- BG  STARTS -->
+					+IE({width: table_width ,aling: 'center', valing: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+						<!-- ID:BG BG OPTIONAL BGCOLOR -->
+						table(align="center" bgcolor="#66b3d4" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+							tr
+								td(align="center" background=image_path+"img-bg-mail-800-1494.jpg" style="width:100%; background-image:url("+image_path+"img-bg-mail-800-1494.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;")
+									+IE-BG({bg_1: 1, width: '800', height: '1494', img: 'img-bg-mail-800-1494.jpg', color: '#66b3d4'})
+									table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" )
+										tr
+											td(style="padding-left: 10px;")
+												|&nbsp;
+											td(align="center" style="font-size:0;")
+												<!-- ID:BG CONTENT-BG -->
+												+IE({width: body_width ,aling: 'center', valing: 'top'})
+												div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+													table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px; border-spacing: 0;")
+														tr
+															+td-margin({height: '58'})
+												|!{IE_TABLE_END}
+												<!-- BG  STARTS -->
+												+IE({width: body_width ,aling: 'center', valing: 'top'})
+												div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+													<!-- ID:BG BG OPTIONAL BGCOLOR -->
+													table(align="center" bgcolor="#BCBBAF" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+														tr
+															td(align="center" background=image_path+"img-width-600-635.jpg" style="width:100%; background-image:url("+image_path+"img-width-600-635.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;")
+																+IE-BG({bg_1: 1, width: '600', height: '635', img: 'img-width-600-635.jpg', color: '#BCBBAF'})
+																table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" )
+																	tr
+																		td(style="padding-left: 10px;")
+																			|&nbsp;
+																		td(align="center" style="font-size:0;")
+																			table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;")
+																				tr
+																					+td-margin({height: '30'})
+																				tr
+																					td.text dadadad
+																				tr
+																					+td-margin({height: '605'})
+																		td(style="padding-right: 10px;")
+																			|&nbsp;
+																|!{IE_BG_END}
+												|!{IE_TABLE_END}
+												<!-- BG  ENDS -->
+											td(style="padding-right: 10px;")
+												|&nbsp;
+									|!{IE_BG_END}
+					|!{IE_TABLE_END}
+					<!-- BG  ENDS -->
+		<!-- /BODY -->
+
+

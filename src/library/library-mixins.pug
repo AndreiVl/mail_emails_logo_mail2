@@ -1,0 +1,83 @@
+- var image_path = 'images/';
+
+//- указываем путь демо сервера
+//- - var image_path = 'http://fourdinos.com/demo/lite2019/images/';
+
+//- Параметры длины таблиц, блоков и колонок сетки
+
+//- Длина всего письма
+- var table_width = '800';
+
+//- Длина тела письма
+- var body_width = '600';
+
+//- Длина колонок
+- var td_2_col_width = '288';
+- var td_3_col_width = '225';
+
+//- Отступы по краем основного письма
+//- Слева
+- var body_pading_l = '10';
+//- Справа
+- var body_pading_r = '10';
+
+//- Нулевые отступы по краям
+//- Слева
+- var nul_pading_l = '0';
+//- Справа
+- var nul_pading_r = '0';
+
+//- Отступы для 2 колонок 
+//- Слева
+- var col_2_pading_l = '5';
+//- Справа
+- var col_2_ading_r = '5';
+
+//- Отступы для 3 колонок 
+//- Слева
+- var col_3_pading_l = '15';
+//- Справа
+- var col_3_ading_r = '15';
+
+
+//- Цвет бегрунда основного письма
+- var bg_table = '#ffffff';
+//- Цвет бегрунда тела письма
+- var bg_body = '#ffffff';
+
+//- переменные коментария для IE 11. В основном пользуемся миксином. Тут берем только закрытие коментария у таблицы.
+- var IE_TABLE_START = '<!--[if (gte mso 9)|(IE)]><table width="'+body_width+'" align="center" border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START}
+
+- var IE_TABLE_START_2_COL = '<!--[if (gte mso 9)|(IE)]><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+td_2_col_width+'" align="right" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START_2_COL}
+
+- var IE_TABLE_START_3_COL = '<!--[if (gte mso 9)|(IE)]><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+td_3_col_width+'" align="center" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START_3_COL}
+
+- var IE_TABLE_END = '<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->';
+//-  вызов |!{IE_TABLE_END}
+
+- var IE_TD_START_2_COL = '<!--[if (gte mso 9)|(IE)]></td><td  align="left" valign="middle" width="'+td_2_col_width+'"><![endif]-->';
+//-  вызов |!{IE_TD_START_2_COL}
+
+- var IE_TD_START_3_COL = '<!--[if (gte mso 9)|(IE)]></td><td  align="left" valign="top" width="'+td_3_col_width+'"><![endif]-->';
+//-  вызов |!{IE_TD_START_3_COL}
+
+//- Переменая для беграунда
+//- Начало
+- var IE_BG_START = '<!--[if (gte mso 9)|(IE)]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width: 600px; height: 400px;"><v:fill type="frame" src="'+image_path+'bg__colorli1-01.jpg" color="#BCBBAF"/><v:textbox inset="0,0,0,0"><![endif]-->';
+//- Конец
+- var IE_BG_END = '<!--[if (gte mso 9)|(IE)]></v:textbox> </v:rect> <![endif]-->';
+
+include margin/margin.pug
+include td-margin/td-margin.pug
+include td-width/td-width.pug
+include IE/IE.pug
+include IE-BG/IE-BG.pug
+include img/img.pug
+include btn/btn.pug
+include ul/ul.pug
+include icon-text/icon-text.pug
+include bulet-li/bulet-li.pug
+include title/title.pug
